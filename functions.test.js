@@ -27,10 +27,17 @@ test('Should be falsy', () => {
   expect(functions.checkValue(null)).toBeFalsy();
 });
 
-// toBeFalsy
+// toStrictEqual
 test('User should be Agustin Ramunno object', () => {
   expect(functions.createUser()).toStrictEqual({
     firstName: 'Agustin',
     lastName: 'Ramunno',
   });
+});
+
+// Less than and greater than
+test('Should be under 1600', () => {
+  const load1 = 800;
+  const load2 = 800;
+  expect(load1 + load2).toBeLessThanOrEqual(1600);
 });
